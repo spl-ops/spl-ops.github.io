@@ -1,38 +1,103 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Scrollr: Hands-free scrolling for macOS. Enjoy smooth reading with adjustable scroll speeds and zero effort. Perfect for students, researchers, and book lovers!"
+    />
+    <meta
+      name="keywords"
+      content="autoscroller for mac, hands-free scrolling app, scrollr app, auto scrolling macOS, automatic scrolling app, read hands-free"
+    />
+    <meta name="author" content="Scrollr Team" />
+    <meta
+      property="og:title"
+      content="Scrollr: Hands-Free Scrolling for macOS"
+    />
+    <meta
+      property="og:description"
+      content="Scrollr lets you scroll your screen hands-free with adjustable speed and effortless reading. Perfect for students, researchers, and anyone who reads online."
+    />
+    <meta property="og:image" content="images/s.png" />
+    <meta property="og:url" content="https://scrollr.tech" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'self';
+        script-src 'self' https://cdnjs.buymeacoffee.com;
+        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+        font-src 'self' https://fonts.gstatic.com;
+        img-src 'self' data: https:;
+        connect-src 'self';
+        object-src 'none';
+    "
+    />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Scrollr: Hands-Free Scrolling for macOS</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="app-bar">
+        <img src="images/s.png" alt="Logo" class="logo" />
+        <h1 class="app-title">scrollr</h1>
+        <div class="spacer"></div>
 
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="/">
-
-  <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="scrollr_web">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>scrollr_web</title>
-  <link rel="manifest" href="manifest.json">
-</head>
-<body>
-  <script src="flutter_bootstrap.js" async></script>
-</body>
+      </header>
+      <main class="main-content">
+        <div class="logo-container">
+          <img src="images/s.png" alt="Scrollr Logo" class="logo-large" />
+        </div>
+        <p class="description">auto scroll app for macOS</p>
+        <div class="buttons">
+          <button
+            class="btn btn-demo"
+            onclick="openUrl('https://youtu.be/8Mhtyn4EcVk')"
+          >
+            demo
+          </button>
+          <button
+            class="btn btn-scrollr"
+            onclick="openUrl('http://buymeacoffee.com/scrollr/e/351273')"
+          >
+            get scrollr
+          </button>
+        </div>
+      </main>
+      <footer class="footer">
+        <script
+          data-name="BMC-Widget"
+          data-cfasync="false"
+          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+          data-id="scrollr"
+          data-description="Support me on Buy me a coffee!"
+          data-message="help me build more such apps"
+          data-color="#5F7FFF"
+          data-position="Right"
+          data-x_margin="18"
+          data-y_margin="18"
+        ></script>
+        <p class="footer-text">
+          i have kept this app free for you, if your financial situation allows,
+          please consider supporting me. <br />
+          made with ❤️ by
+          <a href="mailto:splopshq@proton.me" target="_blank"
+            >&#115;&#112;&#108;&#111;&#112;&#115;&#104;&#113;&#64;&#112;&#114;&#111;&#116;&#111;&#110;&#46;&#109;&#101;</a
+          >.
+        </p>
+      </footer>
+    </div>
+    <script>
+      function openUrl(url) {
+        window.open(url, "_blank");
+      }
+    </script>
+  </body>
 </html>
