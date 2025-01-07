@@ -22,26 +22,28 @@
     />
     <meta property="og:image" content="images/s.png" />
     <meta property="og:url" content="https://scrollr.tech" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
-        default-src 'self';
-        script-src 'self' https://cdnjs.buymeacoffee.com;
-        style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-        font-src 'self' https://fonts.gstatic.com;
-        img-src 'self' data: https:;
-        connect-src 'self';
-        object-src 'none';
-    "
-    />
+
+
+<meta
+  http-equiv="Content-Security-Policy"
+  content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline' https://cdnjs.buymeacoffee.com https://www.buymeacoffee.com;
+    frame-src https://buymeacoffee.com https://www.buymeacoffee.com;
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+    font-src 'self' https://fonts.gstatic.com;
+    img-src 'self' data: https:;
+    connect-src 'self' https://www.buymeacoffee.com;
+    object-src 'none';
+  "
+/>
     <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
-    <title>scrollr: Hands-Free Scrolling for macOS</title>
+    <title>scrollr: hands-free scrolling for macOS</title>
   </head>
   <body>
     <div class="container">
@@ -49,7 +51,6 @@
         <img src="images/s.png" alt="Logo" class="logo" />
         <h1 class="app-title">scrollr</h1>
         <div class="spacer"></div>
-
       </header>
       <main class="main-content">
         <div class="logo-container">
@@ -57,47 +58,34 @@
         </div>
         <p class="description">auto scroll app for macOS</p>
         <div class="buttons">
-          <button
-            class="btn btn-demo"
-            onclick="openUrl('https://youtu.be/8Mhtyn4EcVk')"
-          >
-            demo
-          </button>
-          <button
-            class="btn btn-scrollr"
-            onclick="openUrl('https://buymeacoffee.com/scrollr/e/351273')"
-          >
+          <button class="btn btn-demo" id="demoButton">demo</button>
+          <button class="btn btn-scrollr" id="downloadButton">
             get scrollr
           </button>
         </div>
       </main>
       <footer class="footer">
-        <script
-          data-name="BMC-Widget"
-          data-cfasync="false"
-          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
-          data-id="scrollr"
-          data-description="Support me on Buy me a coffee!"
-          data-message="help me build more such apps"
-          data-color="#5F7FFF"
-          data-position="Right"
-          data-x_margin="18"
-          data-y_margin="18"
-        ></script>
         <p class="footer-text">
-          i have kept this app free, if your financial situation allows,
-          please consider supporting me. <br />
-          made with ❤️ by
+          i’ve kept this app free. if you can please consider to
+          buy me a coffee.<br />
+          Made with ❤️ by
           <a href="mailto:splopshq@proton.me" target="_blank"
             >&#115;&#112;&#108;&#111;&#112;&#115;&#104;&#113;&#64;&#112;&#114;&#111;&#116;&#111;&#110;&#46;&#109;&#101;</a
           >.
         </p>
+         <script
+          data-name="BMC-Widget"
+          data-id="scrollr"
+          data-description="Support me on Buy me a coffee!"
+          data-message="Help me build more such apps"
+          data-color="#5F7FFF"
+          data-position="Right"
+          data-x_margin="18"
+          data-y_margin="18"
+          src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js"
+        ></script>
       </footer>
     </div>
-    <script>
-      function openUrl(url) {
-        window.open(url, "_blank");
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
